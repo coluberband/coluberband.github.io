@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Coluber</title>
 
+  <style>
+    body{
+      background:black;
+      color:white;
+      font-family:Arial, sans-serif;
+      text-align:center;
+      margin:0;
+    }
+
+    header{
+      padding:00px 20px 50px;
+    }
+
+    .logo{
+      width:900px;
+      max-width:90%;
+      height:auto;
+    }
+
+    nav{
+      margin-top:20px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    nav a:hover{
+      color:red;
+    }
+
+    section{
+      padding:70px 20px;
+    }
+
+    h1{
+      font-size:52px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      font-size:36px;
+      margin-bottom:25px;
+    }
+
+    .bio-text{
+      max-width:900px;
+      margin:0 auto;
+      line-height:1.8;
+      font-size:21px;
+    }
+
+    .band-photo{
+      max-width:1100px;
+      margin:40px auto 0;
+    }
+
+    .band-photo img{
+      width:100%;
+      height:auto;
+      border-radius:8px;
+      display:block;
+    }
+
+    .caption{
+      margin-top:15px;
+      color:#bbb;
+      font-size:16px;
+    }
+
+    .members{
+      max-width:800px;
+      margin:0 auto;
+      text-align:left;
+      line-height:1.9;
+      font-size:22px;
+    }
+
+    .members strong{
+      color:white;
+    }
+
+    .back-home{
+      display:inline-block;
+      margin-top:30px;
+      padding:12px 24px;
+      background:#111;
+      border:2px solid red;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:6px;
+      transition:0.3s;
+    }
+
+    .back-home:hover{
+      background:red;
+      color:black;
+      box-shadow:0 0 12px red;
+    }
+
+    footer{
+      padding:40px;
+      font-size:14px;
+      color:#aaa;
+    }
+
+    @media (max-width: 768px){
+      h1{
+        font-size:38px;
+      }
+
+      h2{
+        font-size:28px;
+      }
+
+      .bio-text{
+        font-size:18px;
+      }
+
+      .members{
+        font-size:18px;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:8px 10px;
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="coluber_logo.png" alt="Coluber logo" class="logo">
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html">Music</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>About Coluber</h1>
+
+    <p class="bio-text">
+      Coluber is a Portuguese heavy metal band inspired by the spirit of the New Wave of British Heavy Metal and by the dark atmosphere of classic horror. Combining galloping riffs, melodic guitars and dramatic storytelling, the band draws from legends, ghost stories and eerie tales to create a sound rooted in tradition but driven by strong imagery and mood.
+    </p>
+
+    <p class="bio-text" style="margin-top:30px;">
+      Formed with a passion for old-school metal, Coluber embraces the energy of the early 1980s while shaping its own identity through haunting themes, memorable choruses and a visual world steeped in mystery. From fog-covered streets to cursed mansions and spectral apparitions, every song is part of the band’s growing universe.
+    </p>
+  </section>
+
+  <section>
+    <h2>Band Image</h2>
+
+    <div class="band-photo">
+      <img src="band-photo.jpg" alt="Coluber band photo">
+      <p class="caption">Replace this image with your chosen Coluber band photo.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Band Members</h2>
+
+    <div class="members">
+      <p><strong>Miguel Ferreira</strong> — vocals</p>
+      <p><strong>Ricardo Almeida</strong> — lead guitar</p>
+      <p><strong>Tiago Carvalho</strong> — rhythm guitar</p>
+      <p><strong>Bruno Monteiro</strong> — bass</p>
+      <p><strong>João Lopes</strong> — drums</p>
+    </div>
+
+    <a href="index.html" class="back-home">Back to Home</a>
+  </section>
+
+  <footer>
+    © Coluber
+  </footer>
+
+</body>
+</html>
