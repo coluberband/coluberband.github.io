@@ -1,196 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Coluber</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Coluber</title>
 
-  <style>
-    body{
-      background:black;
-      color:white;
-      font-family:Arial, sans-serif;
-      text-align:center;
-      margin:0;
-    }
+<style>
 
-    header{
-      padding:00px 20px 60px;
-    }
+body{
+background:black;
+color:white;
+font-family:Arial, sans-serif;
+text-align:center;
+margin:0;
+}
 
-    .logo{
-      width:900px;
-      max-width:90%;
-      height:auto;
-    }
+header{
+padding:30px 20px 50px;
+}
 
-    nav{
-      margin-top:20px;
-    }
+.logo{
+width:900px;
+max-width:90%;
+}
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 15px;
-      font-size:20px;
-      font-weight:bold;
-    }
+nav{
+margin-top:20px;
+}
 
-    nav a:hover{
-      color:red;
-    }
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:20px;
+font-weight:bold;
+}
 
-    section{
-      padding:70px 20px;
-    }
+nav a:hover{
+color:red;
+}
 
-    h1{
-      font-size:52px;
-      margin-bottom:20px;
-    }
+section{
+padding:70px 20px;
+}
 
-    h2{
-      font-size:36px;
-      margin-bottom:25px;
-    }
+h1{
+font-size:50px;
+margin-bottom:20px;
+}
 
-    .bio-text{
-      max-width:900px;
-      margin:0 auto;
-      line-height:1.8;
-      font-size:21px;
-    }
+h2{
+font-size:36px;
+margin-bottom:25px;
+}
 
-    .band-photo{
-      max-width:1100px;
-      margin:40px auto 0;
-    }
+.bio{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:21px;
+margin-bottom:40px;
+}
 
-    .band-photo img{
-      width:100%;
-      height:auto;
-      border-radius:8px;
-      display:block;
-    }
+/* FEATURED IMAGE */
 
-    .caption{
-      margin-top:15px;
-      color:#bbb;
-      font-size:16px;
-    }
+.featured{
+max-width:1100px;
+margin:40px auto;
+border:2px solid #222;
+border-radius:8px;
+overflow:hidden;
+cursor:pointer;
+transition:0.3s;
+}
 
-    .members{
-      max-width:800px;
-      margin:0 auto;
-      text-align:left;
-      line-height:1.9;
-      font-size:22px;
-    }
+.featured:hover{
+border-color:red;
+box-shadow:0 0 18px red;
+}
 
-    .members strong{
-      color:white;
-    }
+.featured img{
+width:100%;
+display:block;
+}
 
-    .back-home{
-      display:inline-block;
-      margin-top:30px;
-      padding:12px 24px;
-      background:#111;
-      border:2px solid red;
-      color:white;
-      text-decoration:none;
-      font-weight:bold;
-      border-radius:6px;
-      transition:0.3s;
-    }
+/* GALLERY GRID */
 
-    .back-home:hover{
-      background:red;
-      color:black;
-      box-shadow:0 0 12px red;
-    }
+.gallery{
+max-width:1200px;
+margin:50px auto 0;
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+gap:20px;
+}
 
-    footer{
-      padding:40px;
-      font-size:14px;
-      color:#aaa;
-    }
+.gallery-item{
+border:2px solid #222;
+border-radius:6px;
+overflow:hidden;
+cursor:pointer;
+transition:0.3s;
+}
 
-    @media (max-width: 768px){
-      h1{
-        font-size:38px;
-      }
+.gallery-item:hover{
+transform:scale(1.03);
+border-color:red;
+box-shadow:0 0 12px red;
+}
 
-      h2{
-        font-size:28px;
-      }
+.gallery-item img{
+width:100%;
+display:block;
+}
 
-      .bio-text{
-        font-size:18px;
-      }
+/* LIGHTBOX */
 
-      .members{
-        font-size:18px;
-      }
+.lightbox{
+display:none;
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.92);
+justify-content:center;
+align-items:center;
+}
 
-      nav a{
-        display:inline-block;
-        margin:8px 10px;
-        font-size:18px;
-      }
-    }
-  </style>
+.lightbox img{
+max-width:95%;
+max-height:95%;
+border-radius:8px;
+}
+
+.lightbox-close{
+position:absolute;
+top:25px;
+right:40px;
+font-size:42px;
+cursor:pointer;
+}
+
+.lightbox-close:hover{
+color:red;
+}
+
+footer{
+padding:40px;
+font-size:14px;
+color:#aaa;
+}
+
+@media (max-width:768px){
+
+h1{
+font-size:36px;
+}
+
+h2{
+font-size:28px;
+}
+
+.bio{
+font-size:18px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-  <header>
-    <img src="coluber_logo.png" alt="Coluber logo" class="logo">
+<header>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="music.html">Music</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+<img src="Coluber_Banner_4K.png" class="logo">
 
-  <section>
-    <h1>About Coluber</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="music.html">Music</a>
+<a href="about.html">About</a>
+</nav>
 
-    <p class="bio-text">
-      Coluber is a Portuguese heavy metal band inspired by the spirit of the New Wave of British Heavy Metal and by the dark atmosphere of classic horror. Combining galloping riffs, melodic guitars and dramatic storytelling, the band draws from legends, ghost stories and eerie tales to create a sound rooted in tradition but driven by strong imagery and mood.
-    </p>
+</header>
 
-    <p class="bio-text" style="margin-top:30px;">
-      Formed with a passion for old-school metal, Coluber embraces the energy of the early 1980s while shaping its own identity through haunting themes, memorable choruses and a visual world steeped in mystery. From fog-covered streets to cursed mansions and spectral apparitions, every song is part of the band’s growing universe.
-    </p>
-  </section>
+<section>
 
-  <section>
-    <h2>Images</h2>
+<h1>About Coluber</h1>
 
-    <div class="band-photo">
-      <img src="coluber_backstage.png" alt="Coluber band photo">
-      <p class="caption">Coluber backstage before a rehearsal session.</p>
-    </div>
-  </section>
+<p class="bio">
+Coluber is a Portuguese heavy metal band inspired by the spirit of the New Wave of British Heavy Metal and the atmosphere of classic horror. Blending galloping riffs, melodic guitars and dark storytelling, the band draws from legends, ghost stories and eerie tales to create a sound rooted in tradition.
+</p>
 
-  <section>
-    <h2>Band Members</h2>
+<p class="bio">
+Influenced by the energy of early 1980s metal, Coluber embraces the raw spirit of the genre while building its own visual and sonic identity. From haunted streets to cursed castles and spectral apparitions, each song is part of a growing universe of dark tales and powerful heavy metal.
+</p>
 
-    <div class="members">
-      <p><strong>Miguel Ferreira</strong> — vocals</p>
-      <p><strong>Ricardo Almeida</strong> — lead guitar</p>
-      <p><strong>Tiago Carvalho</strong> — rhythm guitar</p>
-      <p><strong>Bruno Monteiro</strong> — bass</p>
-      <p><strong>João Lopes</strong> — drums</p>
-    </div>
+</section>
 
-    <a href="index.html" class="back-home">Back to Home</a>
-  </section>
+<section>
 
-  <footer>
-    © Coluber
-  </footer>
+<h2>The Band</h2>
+
+<div class="featured">
+<img src="coluber_backstage.png" onclick="openLightbox(this.src)">
+</div>
+
+</section>
+
+<section>
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="band2.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="gallery-item">
+<img src="band3.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="gallery-item">
+<img src="band4.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="gallery-item">
+<img src="band5.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="gallery-item">
+<img src="band6.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="gallery-item">
+<img src="band7.jpg" onclick="openLightbox(this.src)">
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© Coluber
+
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+
+<span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+
+<img id="lightbox-img">
+
+</div>
+
+<script>
+
+function openLightbox(src){
+document.getElementById("lightbox-img").src = src;
+document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox(event){
+if(event.target.id === "lightbox" || event.target.classList.contains("lightbox-close")){
+document.getElementById("lightbox").style.display = "none";
+}
+}
+
+document.addEventListener("keydown", function(e){
+if(e.key === "Escape"){
+document.getElementById("lightbox").style.display = "none";
+}
+});
+
+</script>
 
 </body>
 </html>
