@@ -3,34 +3,381 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coluber – Music</title>
+<title>Coluber - Music</title>
 
 <style>
+
 body{
 background:black;
 color:white;
-font-family:Arial;
+font-family:Arial, sans-serif;
 text-align:center;
 margin:0;
 }
 
-section{
-padding:80px 20px;
+header{
+padding:00px 20px 60px;
 }
+
+.logo{
+width:900px;
+max-width:90%;
+}
+
+nav{
+margin-top:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-size:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:red;
+}
+
+section{
+padding:70px 20px;
+}
+
+h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+h2{
+font-size:36px;
+margin-bottom:25px;
+}
+
+.intro{
+max-width:900px;
+margin:0 auto;
+line-height:1.8;
+font-size:21px;
+}
+
+/* FEATURED RELEASE */
+
+.featured-release{
+max-width:1200px;
+margin:40px auto 0;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+text-align:left;
+}
+
+.featured-release img{
+width:100%;
+border-radius:8px;
+display:block;
+border:2px solid #222;
+}
+
+.release-text h3{
+font-size:34px;
+margin-top:0;
+margin-bottom:15px;
+}
+
+.release-text p{
+font-size:20px;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+.release-buttons a{
+display:inline-block;
+margin:10px 10px 0 0;
+padding:12px 22px;
+background:#111;
+border:2px solid red;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
+transition:0.3s;
+}
+
+.release-buttons a:hover{
+background:red;
+color:black;
+box-shadow:0 0 12px red;
+}
+
+/* RELEASE GRID */
+
+.release-grid{
+max-width:1200px;
+margin:40px auto 0;
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+gap:30px;
+}
+
+.release-card{
+background:#0d0d0d;
+border:2px solid #222;
+border-radius:8px;
+overflow:hidden;
+transition:0.3s;
+}
+
+.release-card:hover{
+border-color:red;
+box-shadow:0 0 14px rgba(255,0,0,0.45);
+transform:translateY(-4px);
+}
+
+.release-card img{
+width:100%;
+display:block;
+}
+
+.release-card-content{
+padding:20px;
+}
+
+.release-card h3{
+font-size:26px;
+margin-top:0;
+margin-bottom:10px;
+}
+
+.release-meta{
+color:#bbb;
+font-size:16px;
+margin-bottom:15px;
+}
+
+.release-card p{
+font-size:17px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+.card-buttons a{
+display:inline-block;
+margin:8px 8px 0 0;
+padding:10px 18px;
+background:#111;
+border:2px solid red;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
+transition:0.3s;
+font-size:15px;
+}
+
+.card-buttons a:hover{
+background:red;
+color:black;
+}
+
+/* FUTURE RELEASES */
+
+.future-list{
+max-width:800px;
+margin:0 auto;
+text-align:left;
+font-size:21px;
+line-height:1.9;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px;
+font-size:14px;
+color:#aaa;
+}
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+.featured-release{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.release-text{
+text-align:center;
+}
+
+}
+
+@media (max-width:768px){
+
+h1{
+font-size:36px;
+}
+
+h2{
+font-size:28px;
+}
+
+.intro{
+font-size:18px;
+}
+
+.release-text h3{
+font-size:28px;
+}
+
+.release-text p,
+.future-list{
+font-size:18px;
+}
+
+nav a{
+display:inline-block;
+margin:8px 10px;
+font-size:18px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<header>
+
+<img src="coluber_logo.png" alt="Coluber logo" class="logo">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="music.html">Music</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
 <section>
 
 <h1>Music</h1>
 
-<p>More releases coming soon.</p>
-
-<a href="index.html">Back to Home</a>
+<p class="intro">
+Explore the recorded works of Coluber, from standalone singles to full-length releases. Rooted in traditional heavy metal and shaped by horror, folklore and dark storytelling, each release forms part of the band's growing universe.
+</p>
 
 </section>
+
+<section>
+
+<h2>Featured Release</h2>
+
+<div class="featured-release">
+
+<img src="alone_in_the_dark_cover.jpg" alt="Alone in the Dark cover">
+
+<div class="release-text">
+<h3>Alone in the Dark</h3>
+<p>
+A dark and atmospheric heavy metal single inspired by classic horror themes, combining melodic leads, galloping rhythms and haunting imagery.
+</p>
+
+<div class="release-buttons">
+<a href="https://www.youtube.com/watch?v=yKEstwFq0-0" target="_blank" rel="noopener">YouTube</a>
+<a href="https://open.spotify.com/artist/2EpYd1RnfNNfQL54zAgiEV" target="_blank" rel="noopener">Spotify</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Singles</h2>
+
+<div class="release-grid">
+
+<div class="release-card">
+<img src="flying_dutchman_cover.jpg" alt="Flying Dutchman cover">
+<div class="release-card-content">
+<h3>Flying Dutchman</h3>
+<p class="release-meta">Single · 2026</p>
+<p>
+A traditional heavy metal track steeped in maritime legend, driven by sharp riffs and a classic NWOBHM spirit.
+</p>
+<div class="card-buttons">
+<a href="#" target="_blank" rel="noopener">Listen</a>
+<a href="#" target="_blank" rel="noopener">Lyrics</a>
+</div>
+</div>
+</div>
+
+<div class="release-card">
+<img src="alone_in_the_dark_cover.jpg" alt="Alone in the Dark cover">
+<div class="release-card-content">
+<h3>Alone in the Dark</h3>
+<p class="release-meta">Single · 2026</p>
+<p>
+A shadowy and dramatic release built around eerie melodies, horror atmosphere and classic heavy metal energy.
+</p>
+<div class="card-buttons">
+<a href="https://www.youtube.com/watch?v=yKEstwFq0-0" target="_blank" rel="noopener">Listen</a>
+<a href="#" target="_blank" rel="noopener">Lyrics</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Albums</h2>
+
+<div class="release-grid">
+
+<div class="release-card">
+<img src="coluber_album_cover.jpg" alt="Coluber album cover">
+<div class="release-card-content">
+<h3>Coluber</h3>
+<p class="release-meta">Album · 2026</p>
+<p>
+The debut full-length album of Coluber, gathering dark tales, spectral imagery and traditional heavy metal power into one unified statement.
+</p>
+<div class="card-buttons">
+<a href="#" target="_blank" rel="noopener">Listen</a>
+<a href="#" target="_blank" rel="noopener">Tracklist</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Upcoming Releases</h2>
+
+<div class="future-list">
+<p><strong>God Bless Us All</strong> — Single · 2027</p>
+<p><strong>Future albums and singles</strong> — more dark tales to come.</p>
+</div>
+
+</section>
+
+<footer>
+
+© Coluber
+
+</footer>
 
 </body>
 </html>
