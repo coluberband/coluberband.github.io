@@ -1,217 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coluber</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coluber</title>
 
-<style>
+  <style>
+    body{
+      background:black;
+      color:white;
+      font-family:Arial, sans-serif;
+      text-align:center;
+      margin:0;
+    }
 
-body{
-background:black;
-color:white;
-font-family:Arial, sans-serif;
-text-align:center;
-margin:0;
-}
+    header{
+      padding:80px 20px 60px;
+    }
 
-/* HEADER */
+    .logo{
+      width:600px;
+      max-width:90%;
+      height:auto;
+    }
 
-header{
-padding:80px 20px 60px;
-}
+    header p{
+      margin-top:20px;
+      font-size:28px;
+      font-weight:bold;
+    }
 
-.logo{
-width:600px;
-max-width:90%;
-height:auto;
-}
+    section{
+      padding:60px 20px;
+    }
 
-header p{
-margin-top:20px;
-font-size:28px;
-font-weight:bold;
-}
+    h2{
+      margin-bottom:20px;
+      font-size:48px;
+    }
 
-/* SECTIONS */
+    .release-title{
+      font-size:32px;
+      margin-bottom:30px;
+    }
 
-section{
-padding:60px 20px;
-}
+    .video-container{
+      position:relative;
+      width:100%;
+      max-width:900px;
+      margin:0 auto;
+      aspect-ratio:16 / 9;
+    }
 
-h2{
-margin-bottom:20px;
-font-size:48px;
-}
+    .video-container iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      border-radius:8px;
+    }
 
-.release-title{
-font-size:32px;
-margin-bottom:30px;
-}
+    .listen-buttons{
+      margin-top:20px;
+    }
 
-/* VIDEO CONTAINER */
+    .listen-buttons a{
+      display:inline-block;
+      margin:10px;
+      padding:12px 22px;
+      background:#111;
+      border:2px solid red;
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:6px;
+      transition:0.3s;
+      font-size:18px;
+    }
 
-.video-container{
-position:relative;
-width:100%;
-max-width:1400px;
-margin:auto;
-padding-bottom:50%;
-height:0;
-overflow:hidden;
-}
+    .listen-buttons a:hover{
+      background:red;
+      color:black;
+    }
 
-.video-container iframe{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-border:0;
-border-radius:8px;
-}
+    .about-text{
+      max-width:900px;
+      margin:0 auto;
+      line-height:1.6;
+      font-size:22px;
+    }
 
-/* LISTEN BUTTONS */
+    footer{
+      padding:40px;
+      font-size:14px;
+      color:#aaa;
+    }
 
-.listen-buttons{
-margin-top:20px;
-}
+    @media (max-width: 768px){
+      header{
+        padding:60px 20px 40px;
+      }
 
-.listen-buttons a{
-display:inline-block;
-margin:10px;
-padding:12px 22px;
-background:#111;
-border:2px solid red;
-color:white;
-text-decoration:none;
-font-weight:bold;
-border-radius:6px;
-transition:0.3s;
-font-size:18px;
-}
+      header p{
+        font-size:22px;
+      }
 
-.listen-buttons a:hover{
-background:red;
-color:black;
-}
+      h2{
+        font-size:36px;
+      }
 
-/* ABOUT */
+      .release-title{
+        font-size:26px;
+      }
 
-.about-text{
-max-width:900px;
-margin:0 auto;
-line-height:1.6;
-font-size:22px;
-}
+      .about-text{
+        font-size:18px;
+      }
 
-/* FOOTER */
-
-footer{
-padding:40px;
-font-size:14px;
-color:#aaa;
-}
-
-/* MOBILE */
-
-@media (max-width:768px){
-
-header{
-padding:60px 20px 40px;
-}
-
-header p{
-font-size:22px;
-}
-
-h2{
-font-size:36px;
-}
-
-.release-title{
-font-size:26px;
-}
-
-.about-text{
-font-size:18px;
-}
-
-.listen-buttons a{
-display:block;
-width:220px;
-max-width:80%;
-margin:12px auto;
-}
-
-}
-
-</style>
+      .listen-buttons a{
+        display:block;
+        width:220px;
+        max-width:80%;
+        margin:12px auto;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <header>
+    <img src="Coluber_Banner_4K.png" alt="Coluber logo" class="logo">
+    <p>NWOBHM Heavy Metal</p>
+  </header>
 
-<img src="Coluber_Banner_4K.png" alt="Coluber logo" class="logo">
+  <section>
+    <h2>Latest Release</h2>
+    <p class="release-title">Alone in the Dark</p>
 
-<p>NWOBHM Heavy Metal</p>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/yKEstwFq0-0?rel=0&modestbranding=1"
+        title="Coluber - Alone in the Dark"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
-</header>
+  <section>
+    <h2>Listen</h2>
 
-<section>
+    <div class="listen-buttons">
+      <a href="https://open.spotify.com/artist/2EpYd1RnfNNfQL54zAgiEV" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.youtube.com/@coluber.official" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/coluber.official" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/coluberband" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </section>
 
-<h2>Latest Release</h2>
+  <section>
+    <h2>About</h2>
 
-<p class="release-title">Alone in the Dark</p>
+    <p class="about-text">
+      Coluber is a heavy metal project inspired by the New Wave of British Heavy Metal and classic horror themes.
+    </p>
+  </section>
 
-<div class="video-container">
-
-<iframe
-src="https://www.youtube.com/embed/yKEstwFq0-0?rel=0&modestbranding=1"
-title="Coluber - Alone in the Dark"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Listen</h2>
-
-<div class="listen-buttons">
-
-<a href="https://open.spotify.com/artist/2EpYd1RnfNNfQL54zAgiEV" target="_blank" rel="noopener">Spotify</a>
-
-<a href="https://www.youtube.com/@coluber.official" target="_blank" rel="noopener">YouTube</a>
-
-<a href="https://www.instagram.com/coluber.official" target="_blank" rel="noopener">Instagram</a>
-
-<a href="https://www.facebook.com/coluberband" target="_blank" rel="noopener">Facebook</a>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>About</h2>
-
-<p class="about-text">
-Coluber is a heavy metal project inspired by the New Wave of British Heavy Metal and classic horror themes.
-</p>
-
-</section>
-
-<footer>
-
-© Coluber
-
-</footer>
+  <footer>
+    © Coluber
+  </footer>
 
 </body>
 </html>
