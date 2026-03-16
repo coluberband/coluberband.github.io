@@ -26,20 +26,20 @@
     }
 
     nav{
-    margin-top:25px;
+      margin-top:25px;
     }
     
     nav a{
-   color:white;
-   text-decoration:none;
-   margin:0 15px;
-   font-size:20px;
-   font-weight:bold;
-   }
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-size:20px;
+      font-weight:bold;
+    }
 
-   nav a:hover{
-   color:red;
-   }
+    nav a:hover{
+      color:red;
+    }
 
     .logo{
       width:1300px;
@@ -121,6 +121,24 @@
       color:#aaa;
     }
 
+    /* Countdown styling */
+
+    .countdown-section{
+      padding:40px 20px;
+    }
+
+    .countdown-title{
+      font-size:36px;
+      margin-bottom:10px;
+    }
+
+    #countdown{
+      font-size:40px;
+      font-weight:bold;
+      color:red;
+      letter-spacing:3px;
+    }
+
     @media (max-width: 768px){
       header{
         padding:60px 20px 40px;
@@ -169,6 +187,13 @@
     
   </header>
 
+  <!-- Countdown section -->
+
+  <section class="countdown-section">
+    <h2 class="countdown-title">Coluber — Debut Album Arrives In</h2>
+    <div id="countdown">Loading...</div>
+  </section>
+
   <section>
     <h2>Latest Release</h2>
     <p class="release-title">Alone in the Dark</p>
@@ -205,6 +230,37 @@
   <footer>
     © Coluber
   </footer>
+
+  <!-- Countdown script -->
+
+  <script>
+    const releaseDate = new Date("2026-04-10T00:00:00").getTime();
+    const countdown = document.getElementById("countdown");
+
+    function updateCountdown(){
+      const now = new Date().getTime();
+      const distance = releaseDate - now;
+
+      if(distance < 0){
+        countdown.innerHTML = "Out Now";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000*60*60*24));
+      const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+      const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+      const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+      countdown.innerHTML =
+        days + "d " +
+        hours + "h " +
+        minutes + "m " +
+        seconds + "s";
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+  </script>
 
 </body>
 </html>
