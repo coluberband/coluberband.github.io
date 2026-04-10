@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coluber | Debut Album</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="description" content="Explore Coluber, the debut album by Coluber — a NWOBHM-inspired heavy metal release filled with galloping riffs, dark atmosphere and cinematic power.">
+  <meta property="og:title" content="Coluber | Debut Album">
+  <meta property="og:description" content="The debut album by Coluber — traditional heavy metal forged in darkness.">
+  <meta property="og:image" content="https://coluber.pt/coluber.png">
+  <meta property="og:url" content="https://coluber.pt/coluber-album.html">
+  <meta property="og:type" content="music.album">
+
+  <style>
+    :root{
+      --bg:#000;
+      --panel:#0d0d0d;
+      --panel-2:#111;
+      --text:#fff;
+      --muted:#bbb;
+      --border:#222;
+      --accent:#d40000;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Arial, sans-serif;
+      text-align:center;
+    }
+
+    a{
+      color:inherit;
+    }
+
+    header{
+      padding:0 20px 50px;
+    }
+
+    .logo{
+      width:1300px;
+      max-width:90%;
+      height:auto;
+    }
+
+    nav{
+      margin-top:20px;
+    }
+
+    nav a{
+      color:var(--text);
+      text-decoration:none;
+      margin:0 15px;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    nav a:hover,
+    nav a.active{
+      color:var(--accent);
+    }
+
+    section{
+      padding:40px 20px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .album-hero{
+      display:grid;
+      grid-template-columns:1fr 1.1fr;
+      gap:40px;
+      align-items:center;
+      text-align:left;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .album-cover img{
+      width:100%;
+      display:block;
+      border-radius:10px;
+      border:2px solid var(--border);
+      box-shadow:0 0 24px rgba(0,0,0,0.45);
+    }
+
+    .eyebrow{
+      color:var(--accent);
+      font-size:16px;
+      font-weight:bold;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    h1{
+      font-size:64px;
+      margin:0 0 14px;
+    }
+
+    .album-meta{
+      color:var(--muted);
+      font-size:20px;
+      margin-bottom:26px;
+    }
+
+    .album-description{
+      font-size:22px;
+      line-height:1.8;
+      max-width:700px;
+      margin:0 0 28px;
+    }
+
+    .button-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .button-row a{
+      display:inline-block;
+      padding:13px 24px;
+      background:var(--panel-2);
+      border:2px solid var(--accent);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:6px;
+      transition:0.3s;
+      font-size:17px;
+    }
+
+    .button-row a:hover{
+      background:var(--accent);
+      color:#000;
+      box-shadow:0 0 12px var(--accent);
+    }
+
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+      max-width:1200px;
+      margin:10px auto 0;
+    }
+
+    .info-card{
+      background:var(--panel);
+      border:2px solid var(--border);
+      border-radius:10px;
+      padding:28px;
+      text-align:left;
+    }
+
+    .info-card h2,
+    .player-section h2,
+    .tracklist-section h2,
+    .notes-section h2{
+      font-size:34px;
+      margin:0 0 18px;
+    }
+
+    .info-card p,
+    .notes-section p,
+    .player-section p{
+      color:var(--muted);
+      font-size:19px;
+      line-height:1.8;
+      margin:0;
+    }
+
+    .player-shell{
+      max-width:1100px;
+      margin:24px auto 0;
+      border-radius:10px;
+      overflow:hidden;
+      border:2px solid var(--border);
+      background:var(--panel);
+    }
+
+    .player-shell iframe{
+      width:100%;
+      aspect-ratio:16 / 9;
+      border:0;
+      display:block;
+    }
+
+    .tracklist-wrap{
+      max-width:1100px;
+      margin:24px auto 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+
+    .tracklist,
+    .highlights{
+      background:var(--panel);
+      border:2px solid var(--border);
+      border-radius:10px;
+      padding:28px;
+      text-align:left;
+    }
+
+    .tracklist ol{
+      margin:0;
+      padding-left:24px;
+    }
+
+    .tracklist li{
+      padding:10px 0;
+      font-size:20px;
+      border-bottom:1px solid #1d1d1d;
+    }
+
+    .tracklist li:last-child{
+      border-bottom:none;
+    }
+
+    .highlights ul{
+      margin:0;
+      padding-left:22px;
+    }
+
+    .highlights li{
+      color:var(--muted);
+      font-size:19px;
+      line-height:1.8;
+      margin-bottom:12px;
+    }
+
+    .notes-section .notes-box{
+      max-width:1100px;
+      margin:24px auto 0;
+      background:var(--panel);
+      border:2px solid var(--border);
+      border-radius:10px;
+      padding:30px;
+      text-align:left;
+    }
+
+    .back-link{
+      display:inline-block;
+      margin:20px auto 60px;
+      padding:12px 24px;
+      background:var(--panel-2);
+      border:2px solid var(--accent);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:6px;
+      transition:0.3s;
+    }
+
+    .back-link:hover{
+      background:var(--accent);
+      color:#000;
+      box-shadow:0 0 12px var(--accent);
+    }
+
+    footer{
+      padding:40px;
+      font-size:14px;
+      color:#aaa;
+    }
+
+    @media (max-width:960px){
+      .album-hero,
+      .tracklist-wrap,
+      .info-grid{
+        grid-template-columns:1fr;
+      }
+
+      .album-hero{
+        text-align:center;
+      }
+
+      .album-description{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .button-row{
+        justify-content:center;
+      }
+    }
+
+    @media (max-width:768px){
+      nav a{
+        display:inline-block;
+        margin:8px 10px;
+        font-size:18px;
+      }
+
+      h1{
+        font-size:42px;
+      }
+
+      .album-meta{
+        font-size:18px;
+      }
+
+      .album-description,
+      .info-card p,
+      .notes-section p,
+      .player-section p,
+      .tracklist li,
+      .highlights li{
+        font-size:18px;
+      }
+
+      .info-card h2,
+      .player-section h2,
+      .tracklist-section h2,
+      .notes-section h2{
+        font-size:28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="coluber_logo.png" alt="Coluber logo" class="logo">
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="music.html" class="active">Music</a>
+      <a href="coluber.html">Coluber</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="album-hero">
+      <div class="album-cover">
+        <img src="coluber.png" alt="Coluber album cover">
+      </div>
+
+      <div class="album-copy">
+        <div class="eyebrow">Debut Album</div>
+        <h1>Coluber</h1>
+        <div class="album-meta">Released April 10, 2026 · Heavy Metal / NWOBHM</div>
+        <p class="album-description">
+          A thunderous introduction to the band’s world, <em>Coluber</em> channels the spirit of classic NWOBHM with galloping rhythms, soaring guitar harmonies and powerful vocals. From high-energy anthems to darker, atmosphere-driven moments, the album establishes the foundation of Coluber’s identity with steel, shadow and cinematic ambition.
+        </p>
+
+        <div class="button-row">
+          <a href="https://www.youtube.com/watch?v=FC5l8yJdJmo" target="_blank" rel="noopener">Full Album on YouTube</a>
+          <a href="https://open.spotify.com/album/4W5ULi0rYI35sOuyDuoBFb?si=k9QkzbgBRWSRxwyEzfPHJA" target="_blank" rel="noopener">Listen on Spotify</a>
+          <a href="music.html">Back to Music</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="info-grid">
+      <div class="info-card">
+        <h2>Overview</h2>
+        <p>
+          Rooted in traditional heavy metal, the debut balances speed, melody and atmosphere while introducing the mythic and dark storytelling that defines Coluber.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h2>Standout Detail</h2>
+        <p>
+          The instrumental <strong>“Giza”</strong> adds an exotic and cinematic twist, drawing on ancient Egyptian-inspired melodies to broaden the album’s world.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h2>Atmosphere</h2>
+        <p>
+          Heroic, nocturnal and ominous — a blend of classic heavy metal power with fantasy and horror-infused imagery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="player-section">
+    <div class="container">
+      <h2>Full Album</h2>
+      <p>Listen to the complete debut release directly from the official YouTube upload.</p>
+
+      <div class="player-shell">
+        <iframe
+          src="https://www.youtube.com/embed/FC5l8yJdJmo"
+          title="Coluber - Coluber (Full Album)"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="tracklist-section">
+    <div class="container">
+      <h2>Tracklist & Highlights</h2>
+
+      <div class="tracklist-wrap">
+        <div class="tracklist">
+          <h2>Tracklist</h2>
+          <ol>
+            <li>Flying Dutchman</li>
+            <li>Alone in the Dark</li>
+            <li>Giza</li>
+            <li>Add Track Title</li>
+            <li>Add Track Title</li>
+            <li>Add Track Title</li>
+            <li>Add Track Title</li>
+            <li>Add Track Title</li>
+          </ol>
+        </div>
+
+        <div class="highlights">
+          <h2>Highlights</h2>
+          <ul>
+            <li><strong>Flying Dutchman</strong> brings a sharp maritime legend to life with classic NWOBHM drive.</li>
+            <li><strong>Alone in the Dark</strong> leans into horror atmosphere and shadowy melodic tension.</li>
+            <li><strong>Giza</strong> stands apart as an instrumental passage into ancient mysticism.</li>
+            <li>Add brief notes for your remaining songs here to give each one some identity.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes-section">
+    <div class="container">
+      <h2>Album Notes</h2>
+      <div class="notes-box">
+        <p>
+          <em>Coluber</em> is the opening chapter of the band’s recorded journey: a debut rooted in the New Wave of British Heavy Metal, but already reaching toward something broader and more atmospheric. It introduces the project’s fascination with darkness, folklore, legend and cinematic imagery while keeping one foot firmly planted in classic metal tradition.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <a href="music.html" class="back-link">Back to Music</a>
+
+  <footer>
+    © Coluber
+  </footer>
+
+</body>
+</html>
