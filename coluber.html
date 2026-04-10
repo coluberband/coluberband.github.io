@@ -91,6 +91,21 @@ margin-bottom:40px;
 
 /* BAND MEMBERS */
 
+/* MEMBERS GRID */
+.members-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:40px auto;
+}
+.member-card{text-align:center;}
+.member-card img{width:100%;border-radius:8px;transition:0.3s;}
+.member-card img:hover{transform:scale(1.05);}
+.member-card h3{margin-top:10px;font-size:18px;}
+.member-card p{color:#ccc;font-size:16px;}
+
+
 .members{
 max-width:600px;
 margin:40px auto;
@@ -254,17 +269,37 @@ Influenced by the energy of early 1980s metal, Coluber embraces the raw spirit o
 
 <h2>Band Members</h2>
 
-<div class="members">
+<div class="members-grid">
 
-<p><strong>Ricardo Almeida</strong> — lead guitar</p>
+<div class="member-card">
+<img src="lead guitarist.png" alt="Ricardo Almeida">
+<h3>Ricardo Almeida</h3>
+<p>Lead Guitar</p>
+</div>
 
-<p><strong>Miguel Ferreira</strong> — vocals</p>
+<div class="member-card">
+<img src="frontman.png" alt="Miguel Ferreira">
+<h3>Miguel Ferreira</h3>
+<p>Vocals</p>
+</div>
 
-<p><strong>João Lopes</strong> — drums</p>
+<div class="member-card">
+<img src="drummer.png" alt="João Lopes">
+<h3>João Lopes</h3>
+<p>Drums</p>
+</div>
 
-<p><strong>Bruno Monteiro</strong> — bass</p>
+<div class="member-card">
+<img src="bassist.png" alt="Bruno Monteiro">
+<h3>Bruno Monteiro</h3>
+<p>Bass</p>
+</div>
 
-<p><strong>Tiago Carvalho</strong> — rhythm guitar</p>
+<div class="member-card">
+<img src="rhythm guitarist.png" alt="Tiago Carvalho">
+<h3>Tiago Carvalho</h3>
+<p>Rhythm Guitar</p>
+</div>
 
 </div>
 
