@@ -188,21 +188,13 @@
     
   </header>
 
-  <!-- Countdown section -->
-
-  <section class="countdown-section">
-    <h2 class="countdown-title">Coluber — Debut Album Arrives In</h2>
-    <p style="color:#aaa;margin-top:10px;">April 10, 2026</p>
-    <div id="countdown">Loading...</div>
-  </section>
-
   <section>
     <h2>Latest Release</h2>
     <p class="release-title">Coluber</p>
 
     <div class="video-container">
       <iframe
-        src="https://www.youtube.com/watch?v=FC5l8yJdJmo"
+        src="https://www.youtube.com/embed/FC5l8yJdJmo"
         title="Coluber - Coluber (Full Album)"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -232,37 +224,5 @@
   <footer>
     © Coluber
   </footer>
-
-  <!-- Countdown script -->
-
-  <script>
-    const releaseDate = new Date("2026-04-10T00:00:00").getTime();
-    const countdown = document.getElementById("countdown");
-
-    function updateCountdown(){
-      const now = new Date().getTime();
-      const distance = releaseDate - now;
-
-      if(distance < 0){
-        countdown.innerHTML = "Out Now";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000*60*60*24));
-      const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-      const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-      const seconds = Math.floor((distance % (1000*60)) / 1000);
-
-      countdown.innerHTML =
-        days + "d " +
-        hours + "h " +
-        minutes + "m " +
-        seconds + "s";
-    }
-
-    updateCountdown();
-    setInterval(updateCountdown,1000);
-  </script>
-
 </body>
 </html>
